@@ -57,8 +57,8 @@ a:hover{color:#666;}
 .font_yellow{color:#F2DC93;}
 .font14b{font-size:14px;}
 
-.top{background:url(../images/include/top_bj.jpg) center top #010104; height:73px;overflow:hidden;}
-.top_bj{background:url(../images/include/top.jpg) no-repeat; width:1000px; height:73px; margin:0 auto;}
+.top{background:url(http://www.monstercable.com.cn/images/include/top_bj.jpg) center top #010104; height:73px;overflow:hidden;}
+.top_bj{background:url(http://www.monstercable.com.cn/images/include/top.jpg) no-repeat; width:1000px; height:73px; margin:0 auto;}
 .logo{width:325px; height:73px; float:left;}
 .top_right{float:left; width:675px; height:73px;}
 .top_link{float:left; margin-right:20px; color:#F2DA94; width:655px; text-align:right;}
@@ -69,14 +69,14 @@ a:hover{color:#666;}
 .dh_menu{width:655px; overflow:hidden; z-index:2; overflow:hidden;  height:30px; float:left; text-align:left; margin-top:10px;}
 .menu{width:540px;margin:auto;z-index:2; position:absolute; margin-left:130px;}
 	.menu ul {}
-	.menu ul li {font-size:12px;font-weight:bold;float:left;position: relative; background:url(../images/include/dh_line.png) no-repeat right; width:105px;}
+	.menu ul li {font-size:12px;font-weight:bold;float:left;position: relative; background:url(http://www.monstercable.com.cn/images/include/dh_line.png) no-repeat right; width:105px;}
 	.menu ul li a{color:#fff;display:block; width:102px; text-align:center; line-height:30px;  height:38px;  font-size:14px; font-family:"微软雅黑"; overflow:hidden; text-decoration:none; cursor:pointer; z-index:2}
-	.menu ul li a:hover {text-decoration: none; color:#EFE457; background:url(../images/include/jt.gif) no-repeat bottom center;}
-	.menu ul li ul{background:url(../images/include/dh_tm.png); height:84px; overflow:hidden;position: absolute;  display:none; padding:5px 0px 0px 2px;}
+	.menu ul li a:hover {text-decoration: none; color:#EFE457; background:url(http://www.monstercable.com.cn/images/include/jt.gif) no-repeat bottom center;}
+	.menu ul li ul{background:url(http://www.monstercable.com.cn/images/include/dh_tm.png); height:84px; overflow:hidden;position: absolute;  display:none; padding:5px 0px 0px 2px;}
 	.menu ul li ul li{background:none;}
 	.menu ul li ul .picli{width:90px; height:90px; float:left; margin-left:1px; margin-right:1px;}
-	.menu ul li ul .picli .dh_pic{background:url(../images/include/dh_bj.jpg) no-repeat; width:90px; height:80px; text-align:center; float:left; display:block; font-size:12px; font-weight:normal; line-height:15px; font-family:Arial;}
-	.menu ul li ul .picli .dh_pic:hover{background:url(../images/include/dh_bj.jpg) no-repeat;}
+	.menu ul li ul .picli .dh_pic{background:url(http://www.monstercable.com.cn/images/include/dh_bj.jpg) no-repeat; width:90px; height:80px; text-align:center; float:left; display:block; font-size:12px; font-weight:normal; line-height:15px; font-family:Arial;}
+	.menu ul li ul .picli .dh_pic:hover{background:url(http://www.monstercable.com.cn/images/include/dh_bj.jpg) no-repeat;}
 	.menu ul li ul .picli .dh_pic div{height:62px;}
 	.menu ul li ul .picli span{color:#f00;}
 	
@@ -85,55 +85,55 @@ a:hover{color:#666;}
 	
 	
 	
-	.menu ul li .dh_font{background:url(../images/include/dh_tm.png);  overflow:hidden;position: absolute; display:none; width:735px; padding:0px; height:auto;}
+	.menu ul li .dh_font{background:url(http://www.monstercable.com.cn/images/include/dh_tm.png);  overflow:hidden;position: absolute; display:none; width:735px; padding:0px; height:auto;}
 	.menu ul li .dh_font li{height:25px;float:left; line-height:25px; width:105px;}
 	.menu ul li .dh_font li a{font-size:12px; font-family:'宋体'; font-weight:normal; color:#D3D2D2; text-align:left; line-height:25px; height:25px; width:100px; display:block; border-bottom:1px dotted #D3D2D2; padding-left:5px; }
-	.menu ul li .dh_font li a:hover{background:url(../images/include/dh_hover.gif) repeat-x; font-weight:bold; color:#C71632;}
+	.menu ul li .dh_font li a:hover{background:url(http://www.monstercable.com.cn/images/include/dh_hover.gif) repeat-x; font-weight:bold; color:#C71632;}
 	
 	
-.index_left{width:284px; height:155px; float:left; background:url(../images/index/index_left.png) no-repeat;}
+.index_left{width:284px; height:155px; float:left; background:url(http://www.monstercable.com.cn/images/index/index_left.png) no-repeat;}
 .index_left form{margin-left:18px; margin-top:88px;}
 .index_left div{text-align:left;}
 .index_left .inputstyle{border:1px solid #342A1B; background:none; height:18px; line-height:18px; padding:1px; width:151px;}
 /*首页下拉菜单*/
 #uboxstyle .select_box{width:155px;height:22px; float:left;}
-#uboxstyle div.tag_select{display:block;color:#fff;width:155px;height:22px;background:transparent url("../images/index/ubox-select.gif") no-repeat 0 0;padding:0 5px;line-height:22px;}
-#uboxstyle div.tag_select_hover{display:block;color:#fff;width:155px;height:22px;background:transparent url("../images/index/ubox-select.gif") no-repeat 0 -22px;padding:0 5px;line-height:22px;}
-#uboxstyle div.tag_select_open{display:block;color:#fff;width:155px;height:22px;background:transparent url("../images/index/ubox-select.gif") no-repeat 0 -44px;padding:0 5px;line-height:22px;}
-#uboxstyle ul.tag_options{position:absolute;padding:0;margin:0;list-style:none;background:transparent url("../images/index/ubox-select.gif") no-repeat left bottom;width:155px;padding:0 0 5px;margin:0;}
-#uboxstyle ul.tag_options li{background:transparent url("../images/index/ubox-select.gif") repeat-y 0 -66px;display:block;width:155px;padding:0 5px;height:22px;text-decoration:none;line-height:20px;color:#fff;}
-#uboxstyle ul.tag_options li.open_hover{background:transparent url("../images/index/ubox-select.gif") no-repeat 0 -88px;color:#fff}
-#uboxstyle ul.tag_options li.open_selected{background:transparent url("../images/index/ubox-select.gif") no-repeat 0 -88px;color:#fff}
+#uboxstyle div.tag_select{display:block;color:#fff;width:155px;height:22px;background:transparent url("http://www.monstercable.com.cn/images/index/ubox-select.gif") no-repeat 0 0;padding:0 5px;line-height:22px;}
+#uboxstyle div.tag_select_hover{display:block;color:#fff;width:155px;height:22px;background:transparent url("http://www.monstercable.com.cn/images/index/ubox-select.gif") no-repeat 0 -22px;padding:0 5px;line-height:22px;}
+#uboxstyle div.tag_select_open{display:block;color:#fff;width:155px;height:22px;background:transparent url("http://www.monstercable.com.cn/images/index/ubox-select.gif") no-repeat 0 -44px;padding:0 5px;line-height:22px;}
+#uboxstyle ul.tag_options{position:absolute;padding:0;margin:0;list-style:none;background:transparent url("http://www.monstercable.com.cn/images/index/ubox-select.gif") no-repeat left bottom;width:155px;padding:0 0 5px;margin:0;}
+#uboxstyle ul.tag_options li{background:transparent url("http://www.monstercable.com.cn/images/index/ubox-select.gif") repeat-y 0 -66px;display:block;width:155px;padding:0 5px;height:22px;text-decoration:none;line-height:20px;color:#fff;}
+#uboxstyle ul.tag_options li.open_hover{background:transparent url("http://www.monstercable.com.cn/images/index/ubox-select.gif") no-repeat 0 -88px;color:#fff}
+#uboxstyle ul.tag_options li.open_selected{background:transparent url("http://www.monstercable.com.cn/images/index/ubox-select.gif") no-repeat 0 -88px;color:#fff}
 
-.index_right{width:712px; height:155px; float:left; margin-left:4px; background:url(../images/index/index_right.png) no-repeat;}	
+.index_right{width:712px; height:155px; float:left; margin-left:4px; background:url(http://www.monstercable.com.cn/images/index/index_right.png) no-repeat;}	
 
 .index_news{width:330px; margin-left:10px; float:left; margin-top:8px;}
 .index_menu{width:100%; border-bottom:1px solid #3B343E; color:#C3AB86; font-family:"微软雅黑"; height:25px; font-size:14px;}
 .index_menu span{color:#ADADAD; font-size:11px; font-family:"Times New Roman";}
 .index_news_list{width:330px; margin-top:15px;}
-.index_news_list li{border-bottom:1px dotted #666169; background:url(../images/index/jt.png) no-repeat 5px 8px; padding-left:15px; height:23px; line-height:23px;}
+.index_news_list li{border-bottom:1px dotted #666169; background:url(http://www.monstercable.com.cn/images/index/jt.png) no-repeat 5px 8px; padding-left:15px; height:23px; line-height:23px;}
 .index_news_list li a{color:#676369;}
 
 .index_prod{width:340px; margin-left:20px; float:left; margin-top:8px;}
 
 
-.bottombj{background:url(../images/include/bottom_bj.jpg) center no-repeat #020202; height:65px;}
+.bottombj{background:url(http://www.monstercable.com.cn/images/include/bottom_bj.jpg) center no-repeat #020202; height:65px;}
 .bottom_bj{margin:0 auto; height:55px; padding-top:7px; color:#505050; width:1000px; position:relative}
 .bottom_bj a{color:#4c3e2c;}
 .index_box{position:absolute; width:1000px; z-index:100; margin-top:-160px; left:0} 
 
-.ny_bj{background:url(../images/include/nybj.jpg) no-repeat top center; overflow:hidden; width:100%;}
-.ny_box{width:1000px; margin:28px auto 42px auto; border:1px solid #171717; background:url(../images/include/bj.png); overflow:hidden; padding-bottom:20px;min-height:1000px;}
-*html .ny_box{width:1000px; margin:28px auto 42px auto; border:1px solid #171717; background:url(../images/include/bj.png); overflow:hidden; padding-bottom:20px;}
-.ny_left{width:715px; float:left; margin:20px; overflow:hidden;background:url(../images/include/line_right.png) top right no-repeat;min-height:1000px;}
-*html .ny_left{width:715px; float:left; margin:15px 15px 15px 10px; overflow:hidden;background:url(../images/include/line_right.png) top right no-repeat;}
-.location{background:url(../images/include/line.png) no-repeat left bottom; line-height:35px; height:35px; font-size:13px; width:677px;}
+.ny_bj{background:url(http://www.monstercable.com.cn/images/include/nybj.jpg) no-repeat top center; overflow:hidden; width:100%;}
+.ny_box{width:1000px; margin:28px auto 42px auto; border:1px solid #171717; background:url(http://www.monstercable.com.cn/images/include/bj.png); overflow:hidden; padding-bottom:20px;min-height:1000px;}
+*html .ny_box{width:1000px; margin:28px auto 42px auto; border:1px solid #171717; background:url(http://www.monstercable.com.cn/images/include/bj.png); overflow:hidden; padding-bottom:20px;}
+.ny_left{width:715px; float:left; margin:20px; overflow:hidden;background:url(http://www.monstercable.com.cn/images/include/line_right.png) top right no-repeat;min-height:1000px;}
+*html .ny_left{width:715px; float:left; margin:15px 15px 15px 10px; overflow:hidden;background:url(http://www.monstercable.com.cn/images/include/line_right.png) top right no-repeat;}
+.location{background:url(http://www.monstercable.com.cn/images/include/line.png) no-repeat left bottom; line-height:35px; height:35px; font-size:13px; width:677px;}
 .location span{color:#C90E2C}
 .location img{vertical-align:middle;}
 
 .prodtype{float:left; width:430px; margin-left:15px;}
 .prodtype dt{margin-top:20px; font-size:14px; font-family:"微软雅黑"; font-weight:bold; color:#fff; line-height:25px; height:25px;}
-.prodtype dd{background:url(../images/products/prodtype_bj.png) no-repeat top; width:430px; padding-top:15px;}
+.prodtype dd{background:url(http://www.monstercable.com.cn/images/products/prodtype_bj.png) no-repeat top; width:430px; padding-top:15px;}
 .prodtype dd .imgtype{float:left; width:115px; height:187px;}
 .prodtype dd span{float:left; width:290px; margin-left:15px; font-size:13px; color:#939393; display:block; padding-top:15px;}
 
@@ -141,14 +141,14 @@ a:hover{color:#666;}
 *html .prodtype_listbox{width:212px; position:absolute;  margin-left:30px; float:right;}
 *+html .prodtype_listbox{width:212px; position:absolute;  margin-left:30px; float:right;}
 .prodtype_listbox ul{width:180px; margin-left:24px; margin-top:10px;}
-.prodtype_listbox ul li{background:url(../images/products/dian.gif) no-repeat 10px 10px;border-bottom:1px dotted #6A6A6A; padding-left:20px; padding-right:10px; width:150px; line-height:23px; height:23px;}
-.prodtype_listtop{width:212px; background:url(../images/products/type_right_top.png) top left no-repeat; overflow:hidden; padding-bottom:5px;}
-.prodtype_listbottom{background:url(../images/products/type_right_bottom.png) no-repeat bottom; width:212px; height:15px; overflow:hidden}
+.prodtype_listbox ul li{background:url(http://www.monstercable.com.cn/images/products/dian.gif) no-repeat 10px 10px;border-bottom:1px dotted #6A6A6A; padding-left:20px; padding-right:10px; width:150px; line-height:23px; height:23px;}
+.prodtype_listtop{width:212px; background:url(http://www.monstercable.com.cn/images/products/type_right_top.png) top left no-repeat; overflow:hidden; padding-bottom:5px;}
+.prodtype_listbottom{background:url(http://www.monstercable.com.cn/images/products/type_right_bottom.png) no-repeat bottom; width:212px; height:15px; overflow:hidden}
 .uppage{margin-top:20px; overflow:hidden; border-top:1px dashed #464646; padding-top:15px; height:35px; text-align:center; margin-bottom:30px; width:680px;}
 .uppage a{padding-right:10px; color:#464646;}
 .uppage .curr{color:#FF7F10;}
 
-.type{width:630px; background:url(../images/products/typebj.png) repeat-x; overflow:hidden; padding:25px; line-height:200%;}
+.type{width:630px; background:url(http://www.monstercable.com.cn/images/products/typebj.png) repeat-x; overflow:hidden; padding:25px; line-height:200%;}
 .type strong{color:#D5A140;}
 .type a{margin-right:10px;}
 .type a:hover{color:#fff;}
@@ -173,11 +173,11 @@ a:hover{color:#666;}
 #imgADPlayer ul{border:1px solid #535353; border-top:none;}
 
 .prod_list_title{font-size:18px; font-family:"微软雅黑"; color:#F0A322; font-weight:bold; line-height:30px; height:40px; width:677px; margin-top:25px; margin-bottom:15px;}
-.prod_list_bj{background:url(../images/products/prod_list_bj.png) no-repeat; height:211px; width:677px; margin-top:20px;}
+.prod_list_bj{background:url(http://www.monstercable.com.cn/images/products/prod_list_bj.png) no-repeat; height:211px; width:677px; margin-top:20px;}
 
 .border_red{border-bottom:1px solid #BD0020;}
 .prod_detail_title{font-size:18px; font-family:"微软雅黑"; color:#F0A322; font-weight:bold; line-height:30px; height:40px; width:677px; margin-top:25px; }
-.prod_detail_pic{width:677px; border:1px solid #141012; border-top:none; height:570px; background:url(../images/include/bj.png); text-align:center;}
+.prod_detail_pic{width:677px; border:1px solid #141012; border-top:none; height:570px; background:url(http://www.monstercable.com.cn/images/include/bj.png); text-align:center;}
 
 .intro_box{width:677px; margin-top:30px; border-top:1px solid #BD0020; padding-top:40px; color:#939393;}
 .subtab{font-size:12px; font-weight:normal; cursor:pointer; color:#fff;}
@@ -192,12 +192,12 @@ a:hover{color:#666;}
 
 
 /*内页菜单*/
-.right_menu{background:url(../images/include/right_menu_bj.jpg) no-repeat #060606; width:225px; border:1px solid #000; overflow:hidden; margin-bottom:15px;}
+.right_menu{background:url(http://www.monstercable.com.cn/images/include/right_menu_bj.jpg) no-repeat #060606; width:225px; border:1px solid #000; overflow:hidden; margin-bottom:15px;}
 .right_menu_list{width:200px; margin:10px auto auto auto; margin-bottom:15px; overflow:hidden;}
 .right_menu_list li{border-bottom:1px dotted #717171;}
-.right_menu_list li a{height:28px; line-height:28px; width:165px; background:url(../images/include/jt.png) no-repeat 17px 12px; padding-left:35px; display:block;}
-*html .right_menu_list li a{height:28px; line-height:28px; width:165px; background:url(../images/include/jt.png) no-repeat 17px 12px; padding-left:35px; display:inline;}
-.right_menu_list li a:hover{background:url(../images/include/menubj_on.jpg) no-repeat; font-weight:bold; color:#DF233C;}
+.right_menu_list li a{height:28px; line-height:28px; width:165px; background:url(http://www.monstercable.com.cn/images/include/jt.png) no-repeat 17px 12px; padding-left:35px; display:block;}
+*html .right_menu_list li a{height:28px; line-height:28px; width:165px; background:url(http://www.monstercable.com.cn/images/include/jt.png) no-repeat 17px 12px; padding-left:35px; display:inline;}
+.right_menu_list li a:hover{background:url(http://www.monstercable.com.cn/images/include/menubj_on.jpg) no-repeat; font-weight:bold; color:#DF233C;}
 
 .ny_title{font-size:18px; font-family:"微软雅黑"; color:#F0A322; font-weight:bold; line-height:30px; height:40px; width:677px; margin-top:25px;}
 
@@ -205,11 +205,11 @@ a:hover{color:#666;}
 .askque1{border:1px solid #65633F; background:none; line-height:18px; padding:1px; width:420px; color:#9a9a9a}
 
 .list{}
-.list li{border-bottom:1px dotted #717171; line-height:28px; height:28px;  background:url(../images/include/jt.png) no-repeat 12px 12px;padding-left:30px;}
+.list li{border-bottom:1px dotted #717171; line-height:28px; height:28px;  background:url(http://www.monstercable.com.cn/images/include/jt.png) no-repeat 12px 12px;padding-left:30px;}
 .list li span{float:right;}
 .list li a:hover{color:#fff;}
 
-.but_style{background:url(../images/service/but_bj.jpg) no-repeat; height:22px; width:70px; border:none; cursor:pointer; color:#fff; font-size:12px; text-align:center;}
+.but_style{background:url(http://www.monstercable.com.cn/images/service/but_bj.jpg) no-repeat; height:22px; width:70px; border:none; cursor:pointer; color:#fff; font-size:12px; text-align:center;}
 .salestab{border-top:1px solid #717171;border-right:1px solid #717171;}
 .salestab td{text-align:center; border-bottom:1px solid #717171; border-left:1px solid #717171; padding:1px;}
 .salestab td a{color:#DF233C;}
@@ -231,7 +231,7 @@ a:hover{color:#666;}
 .video_list{margin-top:30px; overflow:hidden; margin-left:20px;}
 *html .video_list{margin-top:30px; overflow:hidden; margin-left:0px;}
 .video_list li{float:left; width:176px; height:165px; text-align:center; margin-left:20px; margin-right:20px; margin-bottom:30px;}
-.video_list li .imgbj{background:url(../images/news/video_bj.png) no-repeat; width:166px; height:120px; padding:5px; display:block; margin-bottom:8px;}
+.video_list li .imgbj{background:url(http://www.monstercable.com.cn/images/news/video_bj.png) no-repeat; width:166px; height:120px; padding:5px; display:block; margin-bottom:8px;}
 .video_list li .imgbj img{width:166px; height:120px;}
 
 
@@ -240,16 +240,16 @@ a:hover{color:#666;}
 .historytab td a{color:#DF233C;}
 
 /*时尚耳机*/
-.list_logo{width:1000px; background:url(../images/headset/bj0.jpg) no-repeat; height:59px;}
-.headset_top{background:url(../images/headset/bj.png) left top no-repeat; width:100%; overflow:hidden; padding-top:20px;}
+.list_logo{width:1000px; background:url(http://www.monstercable.com.cn/images/headset/bj0.jpg) no-repeat; height:59px;}
+.headset_top{background:url(http://www.monstercable.com.cn/images/headset/bj.png) left top no-repeat; width:100%; overflow:hidden; padding-top:20px;}
 .prod_pic_left{float:left; width:520px; height:370px; overflow:hidden;}
 .prod_pic_left .img{width:520px; height:370px;}
 
 .headset_more{position:absolute;float:right; margin-left:400px; margin-top:300px;}
 .headset_intro{width:450px; float:left; margin-left:15px;}
 *html .headset_intro{width:420px; float:left; overflow:hidden;}
-.headset_title{background:url(../images/products/prodtype_bj.png) no-repeat left bottom ; overflow:hidden; font-size:13px; font-weight:bold; color:#E31635; padding-bottom:30px; padding-left:20px;}
-*html .headset_title{background:url(../images/products/prodtype_bj.png) no-repeat left bottom ; overflow:hidden; font-size:13px; font-weight:bold; color:#E31635; padding-bottom:30px; }
+.headset_title{background:url(http://www.monstercable.com.cn/images/products/prodtype_bj.png) no-repeat left bottom ; overflow:hidden; font-size:13px; font-weight:bold; color:#E31635; padding-bottom:30px; padding-left:20px;}
+*html .headset_title{background:url(http://www.monstercable.com.cn/images/products/prodtype_bj.png) no-repeat left bottom ; overflow:hidden; font-size:13px; font-weight:bold; color:#E31635; padding-bottom:30px; }
 
 /*主窗*/
 #Scroll{width:420px;height:280px;}
@@ -261,14 +261,14 @@ a:hover{color:#666;}
 #ScroLine{position:absolute;z-index:1;top:0px;left:0px;width:100%;height:15px; width:5px;overflow:hidden;background:#6C5029; margin-left:-2px; cursor:pointer;}
 
 
-.peijian{background:url(../images/headset/bj2.png) top center no-repeat; height:361px; width:1000px; margin-top:40px;}
+.peijian{background:url(http://www.monstercable.com.cn/images/headset/bj2.png) top center no-repeat; height:361px; width:1000px; margin-top:40px;}
 
 .peijian_font{width:450px; float:left; margin-top:110px; margin-left:55px; color:#A1A1A1;}
 *html .peijian_font{width:450px; float:left; margin-top:110px; margin-left:25px; color:#A1A1A1;}
 
 .peijian_pic{width:455px; height:260px; float:left; margin-left:20px;}
 
-.head_video{background:url(../images/headset/bj_vodeo.png) no-repeat top right; width:1000px; overflow:hidden; height:350px;}
+.head_video{background:url(http://www.monstercable.com.cn/images/headset/bj_vodeo.png) no-repeat top right; width:1000px; overflow:hidden; height:350px;}
 .headvideo_left{float:left; width:320px; height:248px; margin-left:40px; background:#080809; margin-top:26px;}
 *html .headvideo_left{float:left; width:320px; height:248px; margin-left:20px; background:#080809; margin-top:26px;}
 .headvideo_right{margin-left:70px; width:500px; float:left; margin-top:45px;}
@@ -296,8 +296,8 @@ UL.video-list li{WIDTH: 117px; HEIGHT: 68px; margin-left:5px; float:left;}
 
 
 /*评论*/
-.pingl{width:880px; background:url(../images/headset/bj3.png) repeat-x; height:193px; margin-top:20px; margin-left:35px; padding:15px 25px 0px 25px}
-*html .pingl{width:880px; background:url(../images/headset/bj3.png) repeat-x; height:193px; margin-top:20px; margin-left:35px; padding:5px 25px 25px 25px}
+.pingl{width:880px; background:url(http://www.monstercable.com.cn/images/headset/bj3.png) repeat-x; height:193px; margin-top:20px; margin-left:35px; padding:15px 25px 0px 25px}
+*html .pingl{width:880px; background:url(http://www.monstercable.com.cn/images/headset/bj3.png) repeat-x; height:193px; margin-top:20px; margin-left:35px; padding:5px 25px 25px 25px}
 .pingl_title{width:880px; color:#FF123A; font-size:14px; font-weight:bold; height:25px; line-height:25px; border-bottom:1px solid #4B4949;}
 
 .quotes {MARGIN: 20px 0px 0px 0px; WIDTH: 880px; HEIGHT: 130px}
@@ -308,12 +308,12 @@ UL.quotes-list li{padding:10px; height:130px; border:1px solid #333637; border-b
 
 
 .gratitude{}
-.gratitude li{background:url(../images/index/menu_pic.png) 0px 7px no-repeat; padding-left:20px;}
+.gratitude li{background:url(http://www.monstercable.com.cn/images/index/menu_pic.png) 0px 7px no-repeat; padding-left:20px;}
 .gratitude li span{color:#F2DC93;}
 
 
 .sitemap{width:100%; margin-top:20px;}
-.sitemap dt{background:url(../images/sitemap/nic.png) no-repeat left; padding-left:20px; font-size:14px; font-family:"微软雅黑"; overflow:hidden; width:100%;}
+.sitemap dt{background:url(http://www.monstercable.com.cn/images/sitemap/nic.png) no-repeat left; padding-left:20px; font-size:14px; font-family:"微软雅黑"; overflow:hidden; width:100%;}
 .sitemap dt a{color:#EAA20F;}
 .sitemap dd{width:677px; margin-top:10px; overflow:hidden;}
 .sitemap dd a{background:#373737; padding: 1px 16px 1px 16px; border:1px solid #777; color:#A1A1A1; margin-right:15px; float:left; margin-bottom:15px;white-space:nowrap;}

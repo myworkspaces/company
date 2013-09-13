@@ -1,3 +1,5 @@
+		var tempUrl="http://www.monstercable.com.cn";
+	
 		var menuids=["treemenu1"] 
 		function buildsubmenus_horizontal(){
 			for (var i=0; i<menuids.length; i++){
@@ -32,6 +34,6 @@
 		{
 			document.getElementById(on1).style.color="#DF233C"
 			document.getElementById(on1).style.fontWeight="bold"
-			document.getElementById(on1).style.background ="url(../../images/include/menubj_on.jpg) no-repeat";
+			document.getElementById(on1).style.background ="url("+tempUrl+"/images/include/menubj_on.jpg) no-repeat";
 		}
 	

@@ -9,5 +9,5 @@
 .rollBox .Cont a:link,.rollBox .Cont a:visited{color:#626466;text-decoration:none;}
 .rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
 .rollBox #List1,.rollBox #List2{float:left;}
-.rollBox .LeftBotton {BACKGROUND:url(../images/index/pro.png) no-repeat left center;  FLOAT: left; WIDTH: 21px; CURSOR: pointer;  TOP: 10px; HEIGHT: 100px}
-.rollBox .RightBotton {RIGHT: 1px; BACKGROUND: url(../images/index/next.png) no-repeat left center;; FLOAT: right; WIDTH: 21px; CURSOR: pointer;TOP: 10px; HEIGHT: 100px}
+.rollBox .LeftBotton {BACKGROUND:url(http://www.monstercable.com.cn/images/index/pro.png) no-repeat left center;  FLOAT: left; WIDTH: 21px; CURSOR: pointer;  TOP: 10px; HEIGHT: 100px}
+.rollBox .RightBotton {RIGHT: 1px; BACKGROUND: url(http://www.monstercable.com.cn/images/index/next.png) no-repeat left center;; FLOAT: right; WIDTH: 21px; CURSOR: pointer;TOP: 10px; HEIGHT: 100px}

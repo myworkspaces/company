@@ -31,9 +31,12 @@ return array(
 		 
     ),
 
-	'STATIC'=>'http://www.local-dev.cn:8001/Public',
+	
 	'WWW'=>'http://www.local-dev.cn:8001',
     'ADMIN'=>'http://admin.local-dev.cn:8001',
+		
+	'STATIC'=>'http://www.local-dev.cn:8001/Public',
+	'TEMP'=>'http://www.monstercable.com.cn',
     
 	'UPLOAD_PATH'=>'./Public/Upload',
 	'UPLOAD_SIZE' =>  31457280 ,
