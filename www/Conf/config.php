@@ -31,7 +31,7 @@ return array(
 		 
     ),
 
-	
+	'Public'=>'http://www.local-dev.cn:8001/Public',
 	'WWW'=>'http://www.local-dev.cn:8001',
     'ADMIN'=>'http://admin.local-dev.cn:8001',
     
