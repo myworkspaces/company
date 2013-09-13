@@ -31,12 +31,9 @@ return array(
 		 
     ),
 
-	'Public'=>'http://www.local-dev.cn:8001/Public',
+	'STATIC'=>'http://www.local-dev.cn:8001/Public',
 	'WWW'=>'http://www.local-dev.cn:8001',
     'ADMIN'=>'http://admin.local-dev.cn:8001',
-    
-// 	'IMG'=>'http://img.local-dev.cn:8001',
-// 	'STATIC'=> 'http://static.local-dev.cn:8001',
     
 	'UPLOAD_PATH'=>'./Public/Upload',
 	'UPLOAD_SIZE' =>  31457280 ,
