@@ -1,13 +1,81 @@
+.rollBox {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+}
 
-.rollBox{width:100%;overflow:hidden;margin:0 auto; position:relative;}
-.rollBox .Cont{width:280px;overflow:hidden;padding-top:5px; float:left; margin-left:10px;}
-.rollBox .ScrCont{width:10000000px;}
-.rollBox .Cont .pic{width:92px;float:left;text-align:center;}
-*+html .rollBox .Cont .pic{width:92px;float:left;text-align:center;}
-.rollBox .Cont .pic img{PADDING-RIGHT: 3px;  DISPLAY: block; PADDING-LEFT: 3px;  PADDING-BOTTOM: 3px; MARGIN: 0px auto;  PADDING-TOP: 3px; width:75px; height:100px;}
-.rollBox .Cont .pic p{line-height:26px;color:#505050;}
-.rollBox .Cont a:link,.rollBox .Cont a:visited{color:#626466;text-decoration:none;}
-.rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
-.rollBox #List1,.rollBox #List2{float:left;}
-.rollBox .LeftBotton {BACKGROUND:url(http://www.monstercable.com.cn/images/index/pro.png) no-repeat left center;  FLOAT: left; WIDTH: 21px; CURSOR: pointer;  TOP: 10px; HEIGHT: 100px}
-.rollBox .RightBotton {RIGHT: 1px; BACKGROUND: url(http://www.monstercable.com.cn/images/index/next.png) no-repeat left center;; FLOAT: right; WIDTH: 21px; CURSOR: pointer;TOP: 10px; HEIGHT: 100px}
+.rollBox .Cont {
+	width: 280px;
+	overflow: hidden;
+	padding-top: 5px;
+	float: left;
+	margin-left: 10px;
+}
+
+.rollBox .ScrCont {
+	width: 10000000px;
+}
+
+.rollBox .Cont .pic {
+	width: 92px;
+	float: left;
+	text-align: center;
+}
+
+*+html .rollBox .Cont .pic {
+	width: 92px;
+	float: left;
+	text-align: center;
+}
+
+.rollBox .Cont .pic img {
+	PADDING-RIGHT: 3px;
+	DISPLAY: block;
+	PADDING-LEFT: 3px;
+	PADDING-BOTTOM: 3px;
+	MARGIN: 0px auto;
+	PADDING-TOP: 3px;
+	width: 75px;
+	height: 100px;
+}
+
+.rollBox .Cont .pic p {
+	line-height: 26px;
+	color: #505050;
+}
+
+.rollBox .Cont a:link,.rollBox .Cont a:visited {
+	color: #626466;
+	text-decoration: none;
+}
+
+.rollBox .Cont a:hover {
+	color: #f00;
+	text-decoration: underline;
+}
+
+.rollBox #List1,.rollBox #List2 {
+	float: left;
+}
+
+.rollBox .LeftBotton {
+	BACKGROUND: url(http://www.monstercable.com.cn/images/index/pro.png)
+		no-repeat left center;
+	FLOAT: left;
+	WIDTH: 21px;
+	CURSOR: pointer;
+	TOP: 10px;
+	HEIGHT: 100px
+}
+
+.rollBox .RightBotton {
+	RIGHT: 1px;
+	BACKGROUND: url(http://www.monstercable.com.cn/images/index/next.png)
+		no-repeat left center;;
+	FLOAT: right;
+	WIDTH: 21px;
+	CURSOR: pointer;
+	TOP: 10px;
+	HEIGHT: 100px
+}

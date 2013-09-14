@@ -11,8 +11,8 @@ BODY {WIDTH: 100%; HEIGHT: 100%}
 #main_flash {WIDTH: 100%; overflow:hidden;z-index:1}
 BODY {PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px}
 #no_flash_img {POSITION: absolute; MARGIN-TOP: -280px; WIDTH: 700px; HEIGHT: 559px; MARGIN-LEFT: -350px; TOP: 50%; LEFT: 50%}
-#resnlink {POSITION: absolute; WIDTH: 79px; BOTTOM: 6px; DISPLAY: block; BACKGROUND: url(images/resnlink.jpg) no-repeat; HEIGHT: 21px; RIGHT: 8px}
-#resnlink:hover {BACKGROUND: url(images/resnlink_over.jpg) no-repeat}
+#resnlink {POSITION: absolute; WIDTH: 79px; BOTTOM: 6px; DISPLAY: block; BACKGROUND: url(http://www.monstercable.com.cn/images/resnlink.jpg) no-repeat; HEIGHT: 21px; RIGHT: 8px}
+#resnlink:hover {BACKGROUND: url(http://www.monstercable.com.cn/images/resnlink_over.jpg) no-repeat}
 </STYLE>
 
 <!--[if lte IE 6]>
@@ -22,35 +22,17 @@ BODY {PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; P
         DD_belatedPNG.fix('div, ul, img, li, input , a,dd,dt,dl');
     </script>
 <![endif]--> 
-<SCRIPT type=text/javascript src="{&STATIC}/js/swfobject.js"></SCRIPT>
+<script type="text/javascript" src="{&STATIC}/js/menu.js"></script>
 </head>
 
 <body>
-<SCRIPT type=text/javascript src="{&STATIC}/js/urchin.js"></SCRIPT>
-<SCRIPT type=text/javascript>
-_uacct = "UA-1854375-17";
-urchinTracker();
-</SCRIPT>
-
-<script type="text/javascript" src="{&STATIC}/js/menu.js"></script>
 
 <layout name="Layout:header" cache="0" />
 	
 <layout name="$content" cache="0" />	
 
 <layout name="Layout:footer" cache="0" />
-
-
-
-<!--<SCRIPT type=text/javascript>
-   var so = new SWFObject("../../flash/flash.swf", "main_swf", "100%", "783", "8", "#000000");
-   so.addParam("align", "middle");
-   so.addParam("scale", "noscale");
-   //so.addParam("menu", "false");
-   if (!so.write("main_flash")) urchinTracker('/html/no_flash');
-
-   urchinTracker('/html/loaded');
-</SCRIPT>-->
+<script language="javascript" src="{&STATIC}/js/changemenu.js"></script>
 <script type="text/javascript" src="{&STATIC}/js/select2css.js"></script>
 <script type="text/javascript">
 function noimgread(newsrc){

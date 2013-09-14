@@ -1,0 +1,116 @@
+<script language="javascript">
+function check_server(ff)
+{
+	if(ff.names.value=="")
+	{
+		alert("请输入联系人姓名！");
+		ff.names.focus();
+		return false;
+	}
+	if(ff.email.value=="")
+	{
+		alert("请输入电子邮箱！");
+		ff.email.focus();
+		return false;
+	}
+	if(ff.email.value.indexOf("@")==-1 || ff.email.value.indexOf(".")==-1)
+	{
+		alert("请输入正确电子邮箱！");
+		ff.email.focus();
+		return false;
+	}
+	if(ff.title.value=="")
+	{
+		alert("请输入主题！");
+		ff.title.focus();
+		return false;
+	}
+	if(ff.content.value=="")
+	{
+		alert("请输入内容！");
+		ff.content.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+
+
+<div class="ny_bj">
+	<div class="ny_box">
+		<div class="ny_left">
+			<div class="location"><img src="{&TEMP}/images/include/title_line.gif" class="marr10" />当前位置：<a href="../index/">首页</a> > <a href="../service/">技术支持</a> > <span>在线咨询</span></div>
+			<div class="ny_title">在线咨询</div>
+			<div class="w680">
+				<form id="form3" name="form3" method="post" action="submit.asp" onsubmit="return check_server(this)">
+                  		<table width="100%" border="0" cellspacing="5" cellpadding="0">
+							<tr>
+								<td colspan="3" align="left" valign="middle"><p>如您对我们的产品及服务有任何意见或查询，欢迎随时与我们联络。</p></td>
+							</tr>
+							<tr>
+								<td height="5" colspan="3"></td>
+							</tr>
+							<tr>
+								<td width="80" valign="middle">公司名称：</td>
+							  <td width="430" align="left" valign="middle"><input name="company" type="text" class="askque" id="company" maxlength="50" /></td>
+								<td align="left" valign="middle"></td>
+							</tr>
+							<tr>
+								<td valign="middle">联系人名称：</td>
+								<td align="left" valign="middle"><input name="names" type="text" class="askque" id="names" maxlength="50" /></td>
+								<td align="left" valign="middle" class="font_red">（必填项）</td>
+							</tr>
+							<tr>
+								<td valign="middle">电子邮箱：</td>
+								<td align="left" valign="middle"><input name="email" type="text" class="askque" id="email" maxlength="50" /></td>
+								<td align="left" valign="middle"><span class="font_red">（必填项）</span></td>
+							</tr>
+							<tr>
+								<td valign="middle">联系电话：</td>
+								<td align="left" valign="middle"><input name="tel" type="text" class="askque" id="tel" maxlength="15" /></td>
+								<td align="left" valign="middle">&nbsp;</td>
+							</tr>
+							<tr>
+								<td valign="middle">主　　题：</td>
+								<td align="left" valign="middle"><input name="title" type="text" class="askque" id="title" maxlength="50" /></td>
+								<td align="left" valign="middle"><span class="font_red">（必填项）</span></td>
+							</tr>
+							<tr>
+								<td valign="top">内　　容：</td>
+								<td align="left" valign="middle"><textarea name="content" id="content" cols="45" rows="5"  class="askque1"></textarea>								</td>
+								<td align="left" valign="top"><span class="font_red">（必填项）</span></td>
+							</tr>
+							
+							<tr>
+								<td height="60">&nbsp;</td>
+								<td align="left"><input type="submit" value="提 交" class="but_style" /></td>
+								<td>&nbsp;</td>
+							</tr>
+				  </table>
+			  </form>
+			
+			</div>
+			
+		</div>
+		
+		
+		
+		<div class="ny_right">
+			<div class="right_menu">
+				<div class="w100"><img src="{&TEMP}/images/service/menu.jpg" alt="技术支持" /></div>
+				<ul class="right_menu_list">
+					<li><a href="#" id="salenetwork">何处购买</a></li>
+					<li><a href="#" id="refuse">拒绝假货</a></li>
+					<li><a href="#" id="fangwei">防伪查询</a></li>
+					<li><a href="#" id="question">常见问题</a></li>
+					<li><a href="#" id="easy">魔声小贴士</a></li>
+					<li><a href="#" id="contactus">联系我们</a></li>
+					<li><a href="#" id="vip">会员注册</a></li>
+				</ul>
+			</div>
+			<layout name="Layout:right" cache="0" />
+		</div>
+	</div>
+</div>
+
+
