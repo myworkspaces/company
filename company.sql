@@ -27,7 +27,7 @@ create table tbl_product
    name                 varchar(50) not null,
    brand                varchar(50) not null,
    pic                  varchar(200) not null,
-   is_show              tinyint(1) not null default 0 comment '0=上架，1=下架，默认0',
+   is_show              tinyint(1) not null default 0 comment '1=上架，0=下架，默认1',
    summary              varchar(200) comment '产品概要',
    description          text not null comment '产品详情',
    create_time          datetime not null,
@@ -48,6 +48,7 @@ create table tbl_company
    contact              varchar(20) not null comment '联系人',
    address              varchar(100) not null comment '地址',
    create_time          datetime not null,
+   update_time          datetime not null,
    primary key (id)
 );
 
