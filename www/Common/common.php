@@ -18,7 +18,7 @@ load ( "extend" );
  * @param string $maxSize 可上传的最大尺寸
  * @param $type 上传文件的类型
  */
-function saveFile($domain, $subDir = false, $maxSize = false, $type = false) {
+function saveFile($domain, $maxSize = false, $type = false) {
 	import ( "ORG.Net.UploadFile" );
 	$upload = new UploadFile (); // 实例化上传类
 	$upload->maxSize = C ( 'UPLOAD_SIZE' ); // 设置附件上传大小
@@ -31,14 +31,10 @@ function saveFile($domain, $subDir = false, $maxSize = false, $type = false) {
 	}
 	$date = date ( "Y/m/d" );
 	$upload->savePath = C ( 'UPLOAD_PATH' ) . '/' . $domain . '/' . $date . '/'; // 设置附件上传目录
-	if(false!==$subDir){//子目录，为了防止重名问题的发生
-		$upload->savePath.=$subDir."/";
-	}
 	mkdir ( $upload->savePath ,0777,true); //创建目录
 	$upload->saveRule = "uniqid"; //文件名生成规则
 
 	if (! $upload->upload ()) { // 上传错误提示错误信息
-// 		print_r($upload);
 		$msg=$upload->getErrorMsg();
 // 		echo mb_detect_encoding($msg);
 		$msg=mb_convert_encoding($msg, "gbk","utf-8");
@@ -48,24 +44,16 @@ function saveFile($domain, $subDir = false, $maxSize = false, $type = false) {
 		return false;
 	} else { // 上传成功获取上传文件信息
 		$info = $upload->getUploadFileInfo ();
-// 		print_r($info);
-		
 
-		//print "上传信息：" . $info [0] ['savepath'];
 		$start = strlen ( C ( 'UPLOAD_PATH' ) ) + 1;
 		for($i = 0; $i < count ( $info ); $i ++) {
 			$str = $info [$i] ['savepath'];
-			//print "path---" . $str;
 			$picPath = msubstr ( $str, $start, (strlen ( $str ) - $start - 1) );
-//			$picSaveName = msubstr ( $info [$i] ['savename'], 0, 13 );
+			$picSaveName = msubstr ( $info [$i] ['savename'], 0, 13 );
 
 			//保存上传文件信息至DB
-			//$info [$i] ['saveContent'] = "folder=" . $picPath . ",uid=" . $picSaveName . ",ext=" . $info [$i] ['extension'] . ",name=" . $info [$i] ['name'] . ",size=" . $info [$i] ['size'];
-//			$info[$i]['saveContent']=C("IMG")."/".$picPath."/".$picSaveName.".".$info[$i]['extension'];
-
-			$info[$i]['saveContent']=C("IMG")."/".$picPath."/".$info[$i]['savename'];
+			$info [$i] ['saveContent'] = "folder=" . $picPath . ",uid=" . $picSaveName . ",ext=" . $info [$i] ['extension'] . ",name=" . $info [$i] ['name'] . ",size=" . $info [$i] ['size'];
 		}
-		//print "real====".$info[0]['realsavepath'];
 		return $info;
 	}
 }
@@ -73,116 +61,90 @@ function saveFile($domain, $subDir = false, $maxSize = false, $type = false) {
  *
  * 上传文件所在位置
  * @param string $msg
- * note:由于上传文件已存为绝对路径,此方法作废
  */
-//function getFileUri($msg) {
-//	if (null == $msg || "" == trim ( $msg )) {
-//		return "";
-//	}
-//	$array = explode ( ",", $msg );
-//	if (count ( $array ) > 1) {
-//		$folder = msubstr ( $array [0], 7, strlen ( $array [0] ) );
-//		return $folder;
-//	} else {
-//		return "";
-//	}
-//}
+function getFileUri($msg) {
+	if (null == $msg || "" == trim ( $msg )) {
+		return "";
+	}
+	$array = explode ( ",", $msg );
+	if (count ( $array ) > 1) {
+		$folder = msubstr ( $array [0], 7, strlen ( $array [0] ) );
+		return $folder;
+	} else {
+		return "";
+	}
+}
 
 /**
  *
  * 上传文件保存后的名称
  * @param string $msg
- * note:由于上传文件已存为绝对路径,此方法作废
  */
-//function getFileName($msg) {
-//	if (null == $msg || "" == trim ( $msg )) {
-//		return "";
-//	}
-//	$array = explode ( ",", $msg );
-//	if (count ( $array ) > 1) {
-//		
-//		$uid = msubstr ( $array [1], 4, strlen ( $array [1] ) );
-//		$ext = msubstr ( $array [2], 4, strlen ( $array [2] ) );
-//		return $uid . "." . $ext;
-//	} else {
-//		return "";
-//	}
-//}
+function getFileName($msg) {
+	if (null == $msg || "" == trim ( $msg )) {
+		return "";
+	}
+	$array = explode ( ",", $msg );
+	if (count ( $array ) > 1) {
+		
+		$uid = msubstr ( $array [1], 4, strlen ( $array [1] ) );
+		$ext = msubstr ( $array [2], 4, strlen ( $array [2] ) );
+		return $uid . "." . $ext;
+	} else {
+		return "";
+	}
+}
 /**
  *
  * 上传文件保存后的后缀名
  * @param string $msg
- * note:由于上传文件已存为绝对路径,此方法作废
  */
-//function getFileExt($msg) {
-//	if (null == $msg || "" == trim ( $msg )) {
-//		return "";
-//	}
-//	$array = explode ( ",", $msg );
-//	if (count ( $array ) > 1) {
-//		
-//		$ext = msubstr ( $array [2], 4, strlen ( $array [2] ) );
-//		return  $ext;
-//	} else {
-//		return "";
-//	}
-//}
+function getFileExt($msg) {
+	if (null == $msg || "" == trim ( $msg )) {
+		return "";
+	}
+	$array = explode ( ",", $msg );
+	if (count ( $array ) > 1) {
+		
+		$ext = msubstr ( $array [2], 4, strlen ( $array [2] ) );
+		return  $ext;
+	} else {
+		return "";
+	}
+}
 /**
  *
  * 上传的文件的大小
  * @param string $msg 上传文件信息
- * note:由于上传文件已存为绝对路径,此方法作废
  */
-//function getFileSize($msg){
-//	if(null==$msg||""==trim($msg)){
-//		return "";
-//	}
-//	$array = explode ( ",", $msg );
-//	$size= msubstr ( $array [6], 5, strlen ( $array [6] ) );
-//	return $size;
-//}
+function getFileSize($msg){
+	if(null==$msg||""==trim($msg)){
+		return "";
+	}
+	$array = explode ( ",", $msg );
+	$size= msubstr ( $array [6], 5, strlen ( $array [6] ) );
+	return $size;
+}
 
 /**
  *
  * 获取上传以前的文件名
  * @param string $msg
- * note:由于上传文件已存为绝对路径,此方法作废
  */
-//function getFilePrevName($msg){
-//	if(null==$msg||""==trim($msg)){
-//		return "";
-//	}
-//	$array = explode ( ",", $msg );
-//	$name= msubstr ( $array [3], 5, strlen ( $array [3] ) );
-//	return $name;
-//}
-/**
- * 
- * $url http://img.local-dev.cn/Model/2013/07/17/51e64753c8568.jpg(13个数字)
- * @return Model/2013/07/17
- */
-function getFileUri($url){
-	$url=substr($url, 7);
-	$index1=strpos($url, "/");
-	$index2=strrpos($url, "/");
-	return substr($url, $index1+1,$index2-$index1-1);
-}
-/**
- * 
- * $url http://img.local-dev.cn/Model/2013/07/17/51e64753c8568.jpg(13个数字)
- * @return 51e64753c8568.jpg
- */
-function getFileName($url){
-	$index=strrpos($url, "/");
-	return substr($url, $index+1);
+function getFilePrevName($msg){
+	if(null==$msg||""==trim($msg)){
+		return "";
+	}
+	$array = explode ( ",", $msg );
+	$name= msubstr ( $array [3], 5, strlen ( $array [3] ) );
+	return $name;
 }
 /**
  * 删除单个文件
- * $url http://img.local-dev.cn/Model/2013/07/17/51e64753c8568.jpg
  */
-function delFile($url){
-	$folder = getFileUri ( $url );
-	$name = getFileName ( $url );
+function delFile($msg){
+	$folder = getFileUri ( $msg );
+	$name = getFileName ( $msg );
 	$project=C('UPLOAD_PATH');
 	$path = $project . "/" . $folder . "/" . $name;
 	$path=mb_convert_encoding($path,"gbk","utf-8");
@@ -211,12 +173,9 @@ function delFiles($files) {
  * 		        正数表示多少秒之后的时间
  */
 function getDatetime($differ=0) {
-	//import ( "ORG.Util.Date" );
-	//$date = new Date ();
 	$format = "%Y-%m-%d %H:%M:%S";
 	$date=time()+$differ;
 	return strftime($format, $date);
-	//return $date->format ( $format = "%Y-%m-%d %H:%M:%S" );
 }
 /**
  * 
