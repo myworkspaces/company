@@ -12,53 +12,6 @@ define ( 'DEFAULT_PAGE_SIZE',24);//默认一页显示条数24
 load ( "extend" );
 /**
  *
- * 文件上传
- * @param string $domain	指定上传文件的主目录
- * @param string $thumb  是否生成缩略图,如果有就传入缩略图的尺寸
- * @param string $maxSize 可上传的最大尺寸
- * @param $type 上传文件的类型
- */
-function saveFile($domain, $maxSize = false, $type = false) {
-	import ( "ORG.Net.UploadFile" );
-	$upload = new UploadFile (); // 实例化上传类
-	$upload->maxSize = C ( 'UPLOAD_SIZE' ); // 设置附件上传大小
-	if ($maxSize !== false) {
-		$upload->maxSize = $maxSize;
-	}
-	$upload->allowExts = array ('jpg', 'gif', 'png', 'jpeg', 'swf', 'max', 'skp', 'zip', 'rar' ); // 设置附件上传类型
-	if (false !== $type) {
-		$upload->allowExts = $type;
-	}
-	$date = date ( "Y/m/d" );
-	$upload->savePath = C ( 'UPLOAD_PATH' ) . '/' . $domain . '/' . $date . '/'; // 设置附件上传目录
-	mkdir ( $upload->savePath ,0777,true); //创建目录
-	$upload->saveRule = "uniqid"; //文件名生成规则
-
-	if (! $upload->upload ()) { // 上传错误提示错误信息
-		$msg=$upload->getErrorMsg();
-// 		echo mb_detect_encoding($msg);
-		$msg=mb_convert_encoding($msg, "gbk","utf-8");
-		echo $msg;
-// 		exit ( $upload->getErrorMsg () . "  " );
-		//$this->error($upload->getErrorMsg());
-		return false;
-	} else { // 上传成功获取上传文件信息
-		$info = $upload->getUploadFileInfo ();
-
-		$start = strlen ( C ( 'UPLOAD_PATH' ) ) + 1;
-		for($i = 0; $i < count ( $info ); $i ++) {
-			$str = $info [$i] ['savepath'];
-			$picPath = msubstr ( $str, $start, (strlen ( $str ) - $start - 1) );
-			$picSaveName = msubstr ( $info [$i] ['savename'], 0, 13 );
-
-			//保存上传文件信息至DB
-			$info [$i] ['saveContent'] = "folder=" . $picPath . ",uid=" . $picSaveName . ",ext=" . $info [$i] ['extension'] . ",name=" . $info [$i] ['name'] . ",size=" . $info [$i] ['size'];
-		}
-		return $info;
-	}
-}
-/**
- *
  * 上传文件所在位置
  * @param string $msg
  */

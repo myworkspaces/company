@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <present name="href">
+		<meta http-equiv="refresh" content="3; url={$href}" />
+	</present>
+    <title>云平台设计</title>
+  </head>
+  <body>
+    <div id="content" class="content clearfix">
+      <div class="sub fling">
+        <div class="index">
+          <div class="tips-message">
+            <div class="message">
+              <present name="href">
+              <h4>{$msg}！3秒后自动跳转页面，若无跳转，请点击链接手动跳转：</h4>
+              <p><a href="{$href}">{$href}</a></p>
+			  <else/>
+			  <h4>{$msg}！</h4>
+			  </present>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

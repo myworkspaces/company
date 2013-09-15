@@ -5,6 +5,8 @@
 	
 	CommonAction +saveFile
 	
+	新增Public/error.html Public/success.html 页面样式未设计
+	
 	问题：
 		Index/createPage页面的文件上传按钮不显示（待解决）
 		
