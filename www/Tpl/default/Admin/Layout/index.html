@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理员后台</title>
+<link rel="stylesheet" type="text/css" href="{&STATIC}/admin/style.css" />
+<script type="text/javascript" src="{&STATIC}/admin/clockp.js"></script>
+<script type="text/javascript" src="{&STATIC}/admin/clockh.js"></script> 
+<script type="text/javascript" src="{&STATIC}/admin/jquery.min.js"></script>
+<script type="text/javascript" src="{&STATIC}/admin/ddaccordion.js"></script>
+
+
+<script type="text/javascript" src="{&STATIC}/admin/jconfirmaction.jquery.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+		$('.ask').jConfirmAction();
+	});
+	
+</script>
+
+<script language="javascript" type="text/javascript" src="{&STATIC}/admin/niceforms.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="{&STATIC}/admin/niceforms-default.css" />
+
+</head>
+<body>
+<div id="main_container">
+
+	<layout name="Layout:header" cache="0" />
+    
+    <div class="main_content">
+    	<layout name="Layout:menu" cache="0" />
+   	 	<div class="center_content"> 
+   	 		<div class="left_content"> 
+    			<layout name="Layout:left" cache="0" />
+    		</div>
+    		<div class="right_content"> 
+    			<layout name="$content" cache="0" />
+    		</div>
+  		</div>             
+    	<div class="clear"></div>
+    </div>
+    
+    <layout name="Layout:footer" cache="0" />
+
+</div>		
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户登录 - 管理后台</title>
+<link rel="stylesheet" type="text/css" href="{&STATIC}/admin/style.css" />
+<script type="text/javascript" src="{&STATIC}/admin/jquery.min.js"></script>
+<script type="text/javascript" src="{&STATIC}/admin/jconfirmaction.jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.ask').jConfirmAction();
+	});
+</script>
+
+<script language="javascript" type="text/javascript" src="{&STATIC}/admin/niceforms.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="{&STATIC}/admin/niceforms-default.css" />
+
+</head>
+<body>
+<div id="main_container">
+
+	<div class="header_login">
+    	<div class="logo"><a href="#"><img src="{&STATIC}/admin/images/logo.gif" alt="" title="" border="0" /></a></div>
+    </div>
+
+     
+    <div class="login_form">
+	    <h3>管理员登录</h3>
+	    <a href="#" class="forgot_pass">忘记密码</a> 
+	    <form action="" method="post" class="niceform">
+	    
+	           <fieldset>
+	               <dl>
+	                   <dt><label for="email">帐号:</label></dt>
+	                   <dd><input type="text" name="" id="" size="30" /></dd>
+	               </dl>
+	               <dl>
+	                   <dt><label for="password">密码:</label></dt>
+	                   <dd><input type="password" name="" id="" size="30" /></dd>
+	               </dl>
+	               
+	               <dl>
+	                   <dt><label></label></dt>
+	                   <dd>
+	               			<input type="checkbox" name="interests[]" id="" value="" />
+	               			<label class="check_label">记住用户名</label>
+	                   </dd>
+	               </dl>
+	               
+	               <dl class="submit">
+	               		<dt></dt>
+	               		<dd>
+		               		<button type="submit" name="submit" id="submit">Enter</button>
+	               		</dd>
+	               </dl>
+	               
+	           </fieldset>
+	    </form>
+	</div>  
+    <div class="footer_login">
+    	<div class="left_footer_login">IN ADMIN PANEL | Powered by <a href="http://indeziner.com">INDEZINER</a></div>
+    	<div class="right_footer_login"><a href="http://indeziner.com"><img src="{&STATIC}/admin/images/indeziner_logo.gif" alt="" title="" border="0" /></a></div>
+    </div>
+</div>		
+</body>
+</html>
