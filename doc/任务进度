@@ -1,7 +1,9 @@
-9/15:
+9/15:feng
 	myadmin.fengchuan.clanmark.com/Index/listPage
 	myadmin.fengchuan.clanmark.com/Index/createPage
 	myadmin.fengchuan.clanmark.com/User/login
+	
+	CommonAction +saveFile
 	
 	问题：
 		Index/createPage页面的文件上传按钮不显示（待解决）
