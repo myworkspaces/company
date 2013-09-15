@@ -1,0 +1,52 @@
+
+
+<div class="ny_bj">
+	<div class="ny_box">
+		<notpresent name="company">
+			<form action="{&WWW}/Company/saveCompany" method="post">
+				<table>
+					<tr>
+						<td><label>联系人：</label></td>
+						<td><input type="text" name="contact" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>电&nbsp;&nbsp;话：</label></td>
+						<td><input type="text" name="tel" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>联系地址：</label></td>
+						<td><input type="text" name="address" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>公司介绍：</label></td>
+						<td><textarea id="company_description" name="description" style="width:500px;height:300px;"></textarea></td>
+					</tr>
+					<tr><td colspan="2" align="center"><input type="submit" value="保存" /><input type="reset" value="取消" /></td></tr>
+				</table>
+			</form>
+		<else/>
+			<form action="{&WWW}/Company/saveCompany" method="post">
+				<input type="hidden" value="{$company.id}" name="id">
+				<table>
+					<tr>
+						<td><label>联系人：</label></td>
+						<td><input type="text" name="contact" value="{$company.contact}" /></td>
+					</tr>
+					<tr>
+						<td><label>电&nbsp;&nbsp;话：</label></td>
+						<td><input type="text" name="tel" value="{$company.tel}" /></td>
+					</tr>
+					<tr>
+						<td><label>联系地址：</label></td>
+						<td><input type="text" name="address" value="{$company.address}" /></td>
+					</tr>
+					<tr>
+						<td><label>公司介绍：</label></td>
+						<td><textarea id="company_description" name="description" style="width:500px;height:300px;">{$company.description}</textarea></td>
+					</tr>
+					<tr><td colspan="2" align="center"><input type="submit" value="保存" /><input type="reset" value="取消" /></td></tr>
+				</table>
+			</form>
+		</notpresent>
+	</div>
+</div>
