@@ -2,7 +2,7 @@
 	import("ORG.Util.Page");
 	class CommonService{
 		//默认值
-		private static $default=array('condition'=>"",'page'=>1,'pageSize'=>DEFAULT_PAGE_SIZE);
+		protected static $default=array('condition'=>"",'page'=>1,'pageSize'=>DEFAULT_PAGE_SIZE);
 		
 		public static function setDefault($key,$value){
 			static::$default[$key]=$value;
