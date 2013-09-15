@@ -74,7 +74,7 @@
 		 * 文件上传
 		 * @param array $options 参考$this->default
 		 */
-		function saveFile($options) {
+		public function saveFile($options) {
 			import ( "ORG.Net.UploadFile" );
 			$upload = new UploadFile (); // 实例化上传类
 				
