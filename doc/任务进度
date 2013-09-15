@@ -7,3 +7,15 @@
 	
 	问题：
 		Index/createPage页面的文件上传按钮不显示（待解决）
+		
+09/15 liu
+	已完成
+		1．前端公司介绍页面,Company/aboutus
+		2．后台管理页面新增页面，修改页面，这两个页面放在一起，通过是否包含数据记录加以区分，Company/companyInfo
+	
+	问题：
+		1．分组后的admin.local-dev.cn如何访问,公司介绍后台管理没有并入Admin目录下
+		2．tp的APP_DEBUG开启了，但是没有输出trace信息，添加了一个配置信息解决，
+		'SHOW_PAGE_TRACE' => true
+		3．错误页面与成功页面的处理
+		3．产品与产品图片如何关联，删除产品后，对应的图片也删除？
