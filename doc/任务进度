@@ -1,0 +1,7 @@
+9/15:
+	myadmin.fengchuan.clanmark.com/Index/listPage
+	myadmin.fengchuan.clanmark.com/Index/createPage
+	myadmin.fengchuan.clanmark.com/User/login
+	
+	问题：
+		Index/createPage页面的文件上传按钮不显示（待解决）
