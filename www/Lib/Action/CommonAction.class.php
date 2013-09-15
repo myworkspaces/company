@@ -7,32 +7,28 @@
 			'type'=>array ('jpg', 'gif', 'png', 'jpeg' ),//允许上传文件类型
 			'thumb'=>false,//是否生成缩略图
 			'thumbWidth'=>"40,80,200",//缩略图的宽
-			'thumbHeight'=>"40,80,200"//缩略图的高	
+			'thumbHeight'=>"40,80,200",//缩略图的高	
+			
+			'domain'=>""//当前访问的域名
 		);
-		
+		public function __construct(){
+			parent::__construct();
+			$this->setDefault("domain", "http://".$_SERVER['HTTP_HOST']);
+		}
 		public function setDefault($key,$value){
 			$this->default[$key]=$value;
 		}
 		
-		public function displayErrorPage($message,$domain){
-			if(empty($domain)){
-				$domain=C("WWW");
-			}
-			redirect($domain."/error?message=".urlencode($message));
+		public function displayErrorPage($message){
+			redirect($this->default['domain']."/error?message=".urlencode($message));
 		}
 		
-		public function displaySuccessPage($message,$href,$domain){
-			if(empty($domain)){
-				$domain=C("WWW");
-			}
-			redirect($domain."/success?message=".urlencode($message)."&href=".urlencode($href));
+		public function displaySuccessPage($message,$href){
+			redirect($this->default['domain']."/success?message=".urlencode($message)."&href=".urlencode($href));
 		}
 		
-		public function displayLoginPage($callback,$domain){
-			if(!isset($domain) || empty($domain)){
-				$domain=C("WWW");
-			} 
-			$url=$domain."/User/login";
+		public function displayLoginPage($callback){
+			$url=$this->default['domain']."/User/login";
 			if(!empty($callback)){
 				$url.="?callback=".urlencode($callback);
 			}
@@ -43,13 +39,9 @@
 		 * 下载文件
 		 */
 		public function readFile(){
-			$domain=C("WWW");
-			if(!empty($_SERVER['HTTP_REFERER'])){//为了区别错误页面
-				$domain=substr($_SERVER['HTTP_REFERER'],0,strpos($_SERVER['HTTP_REFERER'], "/",7));
-			}
 			$file=$_GET['file'];
 			if(empty($file)){
-				$this->displayErrorPage("文件名不能为空！",$domain);
+				$this->displayErrorPage("文件名不能为空！");
 			}
 			$file=C("UPLOAD_PATH")."/".$file;
 			$file=mb_convert_encoding($file,"gbk","utf-8");
@@ -66,7 +58,7 @@
 			    flush();
 			    readfile($file);
 			}else{
-				$this->displayErrorPage("文件不存在！",$domain);
+				$this->displayErrorPage("文件不存在！");
 			}
 		}
 		/**
