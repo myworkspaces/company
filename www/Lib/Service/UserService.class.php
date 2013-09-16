@@ -13,11 +13,12 @@
 		}
 		public function findUser($user){
 			$ret=null;
-			isset($user['id']) && $ret=M("User")->find($user['id']);
-			!isset($user['id']) && isset($user['name']) 
-				&& $ret=M("User")->where("name='".$user['name']."'")->find();
-			!isset($user['id']) && isset($user['email']) 
-				&& $ret=M("User")->where("email='".$user['email']."'")->find();
+			!isset($user['user_group_id']) &&$user['user_group_id']=0;
+			isset($user['id']) && $ret=M("User")->where("user_group_id=".$user['user_group_id'])->find($user['id']);
+			!isset($user['id']) && isset($user['name'])
+				&& $ret=M("User")->where("name='".$user['name']."' and user_group_id=".$user['user_group_id'])->find();
+			!isset($user['id']) && isset($user['email'])
+				&& $ret=M("User")->where("email='".$user['email']."' and user_group_id=".$user['user_group_id'])->find();
 			return $ret;
 		}
 		public function findUsers($options){

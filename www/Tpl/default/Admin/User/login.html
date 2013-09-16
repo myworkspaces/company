@@ -27,34 +27,32 @@
     <div class="login_form">
 	    <h3>管理员登录</h3>
 	    <a href="#" class="forgot_pass">忘记密码</a> 
-	    <form action="" method="post" class="niceform">
-	    
-	           <fieldset>
-	               <dl>
-	                   <dt><label for="email">帐号:</label></dt>
-	                   <dd><input type="text" name="" id="" size="30" /></dd>
-	               </dl>
-	               <dl>
-	                   <dt><label for="password">密码:</label></dt>
-	                   <dd><input type="password" name="" id="" size="30" /></dd>
-	               </dl>
-	               
-	               <dl>
-	                   <dt><label></label></dt>
-	                   <dd>
-	               			<input type="checkbox" name="interests[]" id="" value="" />
-	               			<label class="check_label">记住用户名</label>
-	                   </dd>
-	               </dl>
-	               
-	               <dl class="submit">
-	               		<dt></dt>
-	               		<dd>
-		               		<button type="submit" name="submit" id="submit">Enter</button>
-	               		</dd>
-	               </dl>
-	               
-	           </fieldset>
+	    <form action="{&ADMIN}/User/login" method="post" class="niceform">
+           <fieldset>
+               <dl>
+                   <dt><label for="account">帐号:</label></dt>
+                   <dd><input type="text" name="account" id="" size="30" /></dd>
+               </dl>
+               <dl>
+                   <dt><label for="password">密码:</label></dt>
+                   <dd><input type="password" name="password" id="" size="30" /></dd>
+               </dl>
+               
+               <dl>
+                   <dt><label></label></dt>
+                   <dd>
+               			<input type="checkbox" name="interests" id="" value="" />
+               			<label class="check_label">记住用户名</label>
+                   </dd>
+               </dl>
+               
+               <dl class="submit">
+               		<dt></dt>
+               		<dd>
+	               		<button type="submit" name="submit" id="submit">登录</button>
+               		</dd>
+               </dl>
+           </fieldset>
 	    </form>
 	</div>  
     <div class="footer_login">

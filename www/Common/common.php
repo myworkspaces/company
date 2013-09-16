@@ -161,6 +161,16 @@ function getDay($date){
 }
 /**
  * 
+ * 设置登录用户信息
+ * @param unknown_type $user
+ */
+function setLoginMsg($user){
+	foreach ($user as $key => $value){
+		Cookie::set($key, $value);
+	}
+}
+/**
+ * 
  * 获取登录用户信息
  * @return array
  */
