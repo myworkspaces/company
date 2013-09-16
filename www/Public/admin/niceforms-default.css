@@ -137,10 +137,12 @@ label.check_label {
 
 .NFButtonLeft {
 	background: url(img/button-left.gif) no-repeat 0 0;
+	display:inline-block;
 }
 
 .NFButtonRight {
 	background: url(img/button-right.gif) no-repeat 0 0;
+	display:inline-block;
 }
 /*Textareas*/
 .NFTextarea {
@@ -216,6 +218,7 @@ label.check_label {
 	background: url(img/file.gif) no-repeat 0 0;
 	width: 58px;
 	height: 34px;
+	display:inline-block;
 }
 
 .NFFile {
