@@ -34,6 +34,9 @@
 				
 				$('.yes').bind('click', function(){
 					window.location = thisHref;
+					$(this).parents('.question').fadeOut(300, function() {
+						$(this).remove();
+					});
 				});
 		
 				$('.cancel').bind('click', function(){

@@ -36,4 +36,5 @@
 			3)本地ping了一下admin.local-dev.cn,响应没有问题，但是访问的时候查看firebug时，远程访问Ip竟然是外网一个地址，
 			关闭浏览器，重新打开后又好了，说明是浏览器缓存的问题
 		2.http://admin.local-dev.cn/ProductCategory/categoryList,新增一行的时候，为什么前面的radio没有选中？
-		
+		3.import service的时候直接报系统错误500？
+			错误原因：所引用的service中没有引入CommonService

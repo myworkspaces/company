@@ -1,4 +1,5 @@
 <?php
+	import("@.Service.CommonService") ;
 	/**
 	 * 
 	 * 产品分类数据操作
@@ -21,9 +22,9 @@
 		
 		/**
 		 * 
-		 * 分类保存
+		 * 分类添加
 		 */
-		public function saveCategory($category){
+		public function addCategory($category){
 			$ProductCategory=M('ProductCategory');
 			$result=$ProductCategory->add($category);
 			if($result!==false){
@@ -47,14 +48,17 @@
 		
 		/**
 		 * 
-		 * 分类删除
+		 * 分类删除--todo,与之关联的产品分类关联表对应的数据也要删除
 		 */
-		public function delCategory(){
+		public function delCategory($ids){
 			$ProductCategory=M('ProductCategory');
-			$result=$ProductCategory->save($category);
+			$ProductCategory->startTrans();
+			$result=$ProductCategory->where('id in ('.$ids.')')->delete();
 			if($result!==false){
+				$ProductCategory->commit();
 				return true;
 			}
+			$ProductCategory->rollback();
 			return false;
 		}
 	}
