@@ -1,0 +1,91 @@
+    <style>
+    	tr,td{
+    		text-align:center;
+    	}
+    </style>
+    <h2>产品分类管理</h2> 
+	<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+	    <thead>
+	    	<tr>
+	        	<th scope="col" class="rounded-company"></th>
+	            <th scope="col" width="8%" class="rounded">序号</th>
+	            <th scope="col" width="17%" class="rounded">名称</th>
+	            <th scope="col"  class="rounded">分类级别</th>
+	            <th scope="col"  class="rounded">所属分类</th>
+	            <th scope="col" width="17%" class="rounded">显示/隐藏</th>
+	            <th scope="col"  class="rounded">编辑</th>
+	            <th scope="col"  class="rounded-q4">删除</th>
+	            <!--<th scope="col" width="11%" class="rounded">创建日期</th>
+	            <th scope="col" width="11%" class="rounded-q4">修改日期</th>
+	        --></tr>
+	    </thead>
+	    <tbody class="category_body">
+	    	<tr class="category_first">
+	        	<td><input type="checkbox" name="categoryItem" value="123"/></td>
+	            <td>1</td>
+	            <td>apple</td>
+	            <td>一级</td>
+	            <td>fruit</td>
+	            <td>on</td>
+	            <td><a href="#"><img src="{&STATIC}/admin/images/user_edit.png" alt="" title="" border="0" /></a></td>
+	            <td><a href="#" class="ask"><img src="{&STATIC}/admin/images/trash.png" alt="" title="" border="0" /></a></td>
+	        </tr>
+	    </tbody>
+	</table>
+	<input type="text" class="delids" value=""/>
+	
+	<a href="javascript:;" class="bt_green add_category"><span class="bt_green_lft "></span><strong>添加分类</strong><span class="bt_green_r"></span></a>
+	<!--<a href="#" class="bt_blue"><span class="bt_blue_lft"></span><strong>View all items from category</strong><span class="bt_blue_r"></span></a>
+	--><a href="javascript:;" class="bt_red del_category"><span class="bt_red_lft"></span><strong>删除分类</strong><span class="bt_red_r"></span></a> 
+	     
+	<present name="page">     
+	<div class="pagination">
+		{$page}
+	</div> 
+	</present>
+	
+	<script>
+		$('.add_category').click(function(){
+			var tr="<tr><td><input type='checkbox' name='' /></td>";
+			tr+="<td>--</td><td><input type='text' name='name' size='10'></td>";
+			tr+="<td><select name='type' style='width:50px;'><option value='1'>一级</option><option value='2'>二级</option><option value='3'>三级</option></select></td>";
+			tr+="<td><select name='categoies' style='width:50px;'><option value=''>---</option></select></td>";
+			tr+="<td><input type='radio' name='is_show' value='1' checked>on<input type='radio' name='is_show' value='0'>off</td>";
+			tr+="<td><a href='javascript:;' onclick='saveRow(this);'>save</a></td><td><a href='javascript:;' onclick='delthis(this);'><img src='{&STATIC}/admin/images/trash.png' border='0' /></a></td></tr>";
+			$('.category_body').append(tr);
+		});
+
+		//删除本行
+		function delthis(obj){
+			$(obj).parent().parent().remove();
+		}
+
+		//保存本行
+		function saveRow(obj){
+			var $tr=$(obj).parent().parent();
+			var name=$tr.find('input[name="name"]').val();
+			var type=$tr.find('select[name="type"]').val();
+			var is_show=$tr.find('input[name="is_show"]:checked').val();
+			var category=$tr.find('select[name="categoies"]').val();
+			$.post("",{"name":name,"type":type,"parent_id":category,"is_show":is_show},function(data){
+				alert(data.info);
+			},'json');
+		}
+
+		//选中分类记录
+		$('input[name="categoryItem"]').each(function(i){
+			var id=$(this).val();
+		});
+		
+		//批量删除
+		$('.del_category').click(function(){
+			var delids=$('.delids').val();
+			if($.trim(delids)==""){
+				alert("请选择要删除的分类！");
+				return;
+			}
+			$.post("",{"delids":delids},function(){
+				
+			},'json');
+		});
+	</script>

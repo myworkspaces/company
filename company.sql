@@ -14,7 +14,7 @@ create table tbl_product_category
    create_time          datetime not null,
    update_time          datetime not null,
    primary key (id)
-)
+);
 
 drop table if exists tbl_product;
 
