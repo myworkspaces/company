@@ -159,40 +159,16 @@ function getDay($date){
 	$dateArr=getdate($time);
 	return $dateArr['mday'];
 }
-
-/**
- *
- * 设置登陆用户的SESSION
- * @param $user
- */
-function setLoginUser($user) {
-	//用户登录
-	Session::set ( "nick", $user ['nick'] );
-	Session::set ( "uid", $user ['id'] );
-}
 /**
  * 
- * 获取登录用户的SESSION
+ * 获取登录用户信息
+ * @return array
  */
-function getLoginUser(){
-	$user['nick']=Session::get("nick");
-	$user['uid']=Session::get("uid");
-	if(empty($user['nick'])){
-		return "";
-	}
-	return $user;
-}
-function getCookie($name){
-	//return Cookie::get($name);
-	return $_COOKIE['fc_'.$name];
-}
-function getLoginUserCookie(){
-	$user['nick']=$_COOKIE['fc_nick'];
-	$user['uid']=$_COOKIE['fc_uid'];
-	$user['name']=$_COOKIE['fc_name'];
-// 	$user['nick']=Cookie::get("nick");
-// 	$user['uid']=Cookie::get("uid");
-	if(empty($user['nick'])||empty($user['uid'])||empty($user['name'])){
+function getLoginMsg(){
+	$user['name']=Cookie::get("name");
+	$user['email']=Cookie::get("email");
+	$user['nickname']=Cookie::get("nickname");
+	if(empty($user['name'])||empty($user['email'])||empty($user['nickname'])){
 		return "";
 	}
 	return $user;
@@ -201,18 +177,11 @@ function getLoginUserCookie(){
  * 
  * 清除登录用户信息
  */
-function clearLoginUser(){
-	if(Session::is_set('nick')){
-		unset($_SESSION['nick']);
-		unset($_SESSION['uid']);
-		//unset($_SESSION['name']);//管理后台暂时不加入name
-	}
-}
-function clearLoginUserCookie(){
-	if(Cookie::is_set('nick')){
-		Cookie::delete('nick');
-		Cookie::delete('uid');
+function clearLoginMsg(){
+	if(Cookie::is_set('name')){
 		Cookie::delete('name');
+		Cookie::delete('email');
+		Cookie::delete('nickname');
 	}
 }
 /**
