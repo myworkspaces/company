@@ -20,4 +20,19 @@
 		2．tp的APP_DEBUG开启了，但是没有输出trace信息，添加了一个配置信息解决，
 		'SHOW_PAGE_TRACE' => true
 		3．错误页面与成功页面的处理
+
+09/16 liu
+	问题：
+		1.关于admin.local-dev.cn无法访问的问题，
+			1)绑定hosts本地域名，127.0.0.1 admin.local-dev.cn
+			2)config.php文件配置，
+				'APP_GROUP_LIST'=>'Admin,Www',
+			 	'DEFAULT_GROUP'=>'Www',
+				'APP_SUB_DOMAIN_DEPLOY'=>1, // 开启子域名配置
+				'APP_SUB_DOMAIN_RULES'=>array(  
+			        'admin'=>array('Admin/'),  
+			        'www'=>array('Www/')
+			    ),
+			3)本地ping了一下admin.local-dev.cn,响应没有问题，但是访问的时候查看firebug时，远程访问Ip竟然是外网一个地址，
+			关闭浏览器，重新打开后又好了，说明是浏览器缓存的问题
 		

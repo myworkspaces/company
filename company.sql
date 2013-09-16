@@ -1,16 +1,16 @@
-drop table if exists tbl_goods_category;
+drop table if exists tbl_product_category;
 
 /*==============================================================*/
-/* Table: tbl_product_category   ²úÆ··ÖÀà                                 */
+/* Table: tbl_product_category   äº§å“åˆ†ç±»                                 */
 /*==============================================================*/
 create table tbl_product_category
 (
    id                   integer not null auto_increment,
    name                 varchar(20) not null,
-   type                 tinyint(1) not null comment 'Ò»¼¶·ÖÀà=1£¬¶ş¼¶·ÖÀà=2£¬Èı¼¶·ÖÀà=3',
-   parent_id            integer not null default 0 comment 'Ò»¼¶·ÖÀàÉÏ¼¶·ÖÀà=0,Ä¬ÈÏ=0',
-   is_show              tinyint(1) not null default 0 comment 'ÊÇ·ñÏÔÊ¾¸Ã·ÖÀà£¬1=ÏÔÊ¾£¬0=Òş²Ø£¬Ä¬ÈÏ1',
-   order_num            integer not null comment '·ÖÀàµÄÅÅĞò£¬Ä¬ÈÏ=1',
+   type                 tinyint(1) not null comment 'ä¸€çº§åˆ†ç±»=1ï¼ŒäºŒçº§åˆ†ç±»=2ï¼Œä¸‰çº§åˆ†ç±»=3',
+   parent_id            integer not null default 0 comment 'ä¸€çº§åˆ†ç±»ä¸Šçº§åˆ†ç±»=0,é»˜è®¤=0',
+   is_show              tinyint(1) not null default 0 comment 'æ˜¯å¦æ˜¾ç¤ºè¯¥åˆ†ç±»ï¼Œ1=æ˜¾ç¤ºï¼Œ0=éšè—ï¼Œé»˜è®¤1',
+   order_num            integer not null comment 'åˆ†ç±»çš„æ’åºï¼Œé»˜è®¤=1',
    create_time          datetime not null,
    update_time          datetime not null,
    primary key (id)
@@ -19,7 +19,7 @@ create table tbl_product_category
 drop table if exists tbl_product;
 
 /*==============================================================*/
-/* Table: tbl_products   ²úÆ·±í                                          */
+/* Table: tbl_product   äº§å“è¡¨                                          */
 /*==============================================================*/
 create table tbl_product
 (
@@ -27,9 +27,9 @@ create table tbl_product
    name                 varchar(50) not null,
    brand                varchar(50) not null,
    pic                  varchar(200) not null,
-   is_show              tinyint(1) not null default 0 comment '1=ÉÏ¼Ü£¬0=ÏÂ¼Ü£¬Ä¬ÈÏ1',
-   summary              varchar(200) comment '²úÆ·¸ÅÒª',
-   description          text not null comment '²úÆ·ÏêÇé',
+   is_show              tinyint(1) not null default 1 comment '1=ä¸Šæ¶ï¼Œ0=ä¸‹æ¶ï¼Œé»˜è®¤1',
+   summary              varchar(200) comment 'äº§å“æ¦‚è¦',
+   description          text not null comment 'äº§å“è¯¦æƒ…',
    create_time          datetime not null,
    update_time          datetime not null,
    primary key (id)
@@ -38,32 +38,31 @@ create table tbl_product
 drop table if exists tbl_company;
 
 /*==============================================================*/
-/* Table: tbl_company   ¹«Ë¾ĞÅÏ¢                                        */
+/* Table: tbl_company   å…¬å¸ä¿¡æ¯                                        */
 /*==============================================================*/
 create table tbl_company
 (
    id                   int not null auto_increment,
-   description          text not null comment '½éÉÜĞÅÏ¢',
-   tel                  varchar(20) not null comment 'µç»°',
-   contact              varchar(20) not null comment 'ÁªÏµÈË',
-   address              varchar(100) not null comment 'µØÖ·',
+   description          text not null comment 'ä»‹ç»ä¿¡æ¯',
+   tel                  varchar(20) not null comment 'ç”µè¯',
+   contact              varchar(20) not null comment 'è”ç³»äºº',
+   address              varchar(100) not null comment 'åœ°å€',
    create_time          datetime not null,
-   update_time          datetime not null,
    primary key (id)
 );
 
 drop table if exists tbl_product_category_relation;
 
 /*==============================================================*/
-/* Table: tbl_product_category_relation   ²úÆ··ÖÀà¹ØÁª±í                      */
+/* Table: tbl_product_category_relation   äº§å“åˆ†ç±»å…³è”è¡¨                      */
 /*==============================================================*/
 create table tbl_product_category_relation
 (
    id                   integer not null,
-   category_id          integer not null comment '·ÖÀàid',
-   product_id           integer not null comment '²úÆ·id',
-   create_time          datetime not null comment '´´½¨Ê±¼ä',
-   update_time          datetime not null comment 'ĞŞ¸ÄÊ±¼ä',
+   category_id          integer not null comment 'åˆ†ç±»id',
+   product_id           integer not null comment 'äº§å“id',
+   create_time          datetime not null comment 'åˆ›å»ºæ—¶é—´',
+   update_time          datetime not null comment 'ä¿®æ”¹æ—¶é—´',
    primary key (id)
 );
 
