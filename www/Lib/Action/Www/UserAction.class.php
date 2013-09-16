@@ -53,9 +53,7 @@
 		}
 		
 		public function logout(){
-			Cookie::delete("name");
-			Cookie::delete("email");
-			Cookie::delete("nickname");
+			clearLoginMsg();
 			redirect(C("WWW"));
 		}
 		private function setLogin($user){
@@ -88,7 +86,7 @@
 				$isExisted=$userService->isExisted($user) && $this->displayErrorPage("该用户已经存在！");
 				$flag=$userService->updateUser($user);
 				false===$flag && $this->displayErrorPage("编辑个人信息失败！请联系客服人员！");
-				
+				$this->setLogin(array("name"=>$user['name'],"email"=>$user['email'],"nickname"=>$user['nickname']));
 				$this->displaySuccessPage("编辑个人信息成功！", C("WWW"));
 			}
 			

@@ -11,9 +11,16 @@
 			
 			'domain'=>""//当前访问的域名
 		);
+		
+		protected $loginUser=null;
+		
 		public function __construct(){
 			parent::__construct();
 			$this->setDefault("domain", "http://".$_SERVER['HTTP_HOST']);
+			$this->loginUser=getLoginMsg();
+			if(!empty($this->loginUser)){
+				$this->assign("loginUser",$this->loginUser);
+			}
 		}
 		public function setDefault($key,$value){
 			$this->default[$key]=$value;
