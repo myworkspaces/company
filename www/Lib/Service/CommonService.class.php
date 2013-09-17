@@ -29,8 +29,10 @@
 			$page=new Page($count,$options['pageSize']);
 			$theme='%first% %upPage% %linkPage% %downPage% %end%';
 			$page->setConfig("theme", $theme);
-			$page->setConfig("prev","<< prev");
-			$page->setConfig("next","next >>");
+// 			$page->setConfig("first","<< first");
+// 			$page->setConfig("prev","< prev");
+// 			$page->setConfig("next","next >");
+// 			$page->setConfig("last","last >>");
 			$show=$page->show();
 			return $show;
 		}
