@@ -66,4 +66,59 @@ create table tbl_product_category_relation
    primary key (id)
 );
 
+drop table if exists tbl_user;
+create table tbl_user
+(
+	id	integer not null auto_increment,
+	user_group_id integer not null default 0,
+	name varchar(50) not null,
+	nickname varchar(50) not null,
+	email varchar(50) not null,
+	password varchar(50) not null,
+	portrait varchar(200) ,
+	tel varchar(20) ,
+	address varchar(100) ,
+	status tinyint(1) not null default 0,
+	create_time datetime not null,
+	update_time datetime not null,
+	primary key (id),
+	unique (name),
+	unique (email)
+)engine=myisam;
+
+drop table if exists tbl_user_group;
+create table tbl_user_group
+(
+	id integer not null auto_increment,
+	name varchar(50) not null,
+	permission text not null,
+	create_time datetime not null,
+	update_time datetime not null,
+	primary key (id),
+	unique key (name)
+)engine=myisam;
+
+drop table if exists tbl_regcode;
+create table tbl_regcode
+(
+	id integer not null auto_increment,
+	code varchar(50) not null,
+	status tinyint(1) not null default 0,
+	create_time datetime not null,
+	update_time datetime not null,
+	primary key (id),
+	unique (code)
+)engine=innodb;
+
+drop table if exists tbl_product_regcode_relation;
+create table tbl_product_regcode_relation
+(
+	id integer not null auto_increment,
+	product_id integer not null,
+	regcode integer not null,
+	create_time datetime not null,
+	creater_id integer not null,
+	primary key (id)
+)engine=innodb;
+
 
