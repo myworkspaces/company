@@ -27,10 +27,16 @@
 		
 		public function users(){
 			$this->judgAuth();
+			$page=1;
+			if(isset($_GET['p'])&&1<(int)$_GET['p']){
+				$page=(int)$_GET['p'];
+			}
 			$userService=new UserService();
-			$users=$userService->findUsers($options);
+			$users=$userService->findUsers(array("page"=>$page));
 			if(!empty($users)){
 				$this->assign("users",$users);
+				$showPage=$userService->showPage();
+				$this->assign("page",$showPage);
 			}
 			$this->display(DEFAULT_DISPLAY);
 		}

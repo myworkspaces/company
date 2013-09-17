@@ -2,7 +2,8 @@
 	import("ORG.Util.Page");
 	class CommonService{
 		//默认值
-		protected $default=array('condition'=>"",'page'=>1,'pageSize'=>DEFAULT_PAGE_SIZE);
+// 		protected $default=array('condition'=>"",'page'=>1,'pageSize'=>DEFAULT_PAGE_SIZE);
+		protected $default=array('condition'=>"",'page'=>1,'pageSize'=>1);//测试分页方便
 		
 		public function setDefault($key,$value){
 			$this->default[$key]=$value;
@@ -28,6 +29,8 @@
 			$page=new Page($count,$options['pageSize']);
 			$theme='%first% %upPage% %linkPage% %downPage% %end%';
 			$page->setConfig("theme", $theme);
+			$page->setConfig("prev","<< prev");
+			$page->setConfig("next","next >>");
 			$show=$page->show();
 			return $show;
 		}

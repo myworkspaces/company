@@ -9,7 +9,7 @@
 				$sql="user_group_id=".$options['user_group_id']:$sql="user_group_id in (".$options['user_group_id'].")";
 			!isset($options['status']) && $options['status']=0
 				&& $sql.=" and status=".$options['status'];
-			isset($options['condition']) && $sql.=$options['condition'];
+			isset($options['condition']) && !empty($options['condition']) && $sql.=$options['condition'];
 			$count=M("User")->where($sql)->count();
 			return $count;
 		}
@@ -36,11 +36,15 @@
 		 * @return array
 		 */
 		public function findUsers($options = array()){
+			!isset($options['condition']) && $options['condition']=$this->default['condition'];
+			!isset($options['page']) && $options['page']=$this->default['page'];
+			!isset($options['pageSize']) && $options['pageSize']=$this->default['pageSize'];
+			
 			$ret=null;
 			!isset($options['user_group_id']) && $options['user_group_id']=0;
 			!isset($options['status']) && $options['status']=0;
 			$sql="user_group_id=".$options['user_group_id']." and status=".$options['status'];
-			$ret=M("User")->where($sql)->order("id desc")->select();
+			$ret=M("User")->where($sql)->page($options['page'].",".$options['pageSize'])->order("id desc")->select();
 			return $ret;
 		}
 		/**
