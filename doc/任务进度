@@ -21,7 +21,22 @@
 	解决方案：
 		git checkout -f  #该操作会覆盖本地的代码，建议先备份再执行
 		git pull
-		
+09/17:feng
+	myadmin.fengchuan.clanmark.com/User/login
+	myadmin.fengchuan.clanmark.com/User/create
+	myadmin.fengchuan.clanmark.com/User/edit
+	myadmin.fengchuan.clanmark.com/User/users
+	
+	myadmin.fengchuan.clanmark.com/Regcode/regcodes
+	myadmin.fengchuan.clanmark.com/Regcode/create
+	myadmin.fengchuan.clanmark.com/Regcode/eidt
+	
+	www.fengchuan.clanmark.com/Regcode/create	
+	
+	Admin/UserAction 完成了用户列表，创建编辑用户
+	Admin/RegcodeAction 完成了注册码的列表，创建编辑
+	
+	Www/RegcodeAction 完成了产品注册		
 		
 09/15 liu
 	已完成
