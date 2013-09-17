@@ -181,6 +181,7 @@ function getLoginMsg(){
 	if(empty($user['name'])||empty($user['email'])||empty($user['nickname'])){
 		return "";
 	}
+	Cookie::is_set("usergroup") && $user['usergroup']=Cookie::get("usergroup");
 	return $user;
 }
 /**
@@ -192,6 +193,7 @@ function clearLoginMsg(){
 		Cookie::delete('name');
 		Cookie::delete('email');
 		Cookie::delete('nickname');
+		Cookie::is_set("usergroup") && Cookie::delete("usergroup");
 	}
 }
 /**

@@ -30,7 +30,8 @@
 			redirect($this->default['domain']."/error?message=".urlencode($message));
 		}
 		
-		public function displaySuccessPage($message,$href){
+		public function displaySuccessPage($message,$href = null){
+			empty($href) && $href=$_SERVER['HTTP_REFERER'];
 			redirect($this->default['domain']."/success?message=".urlencode($message)."&href=".urlencode($href));
 		}
 		

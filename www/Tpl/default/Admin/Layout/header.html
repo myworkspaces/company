@@ -1,6 +1,11 @@
 <div class="header">
     <div class="logo"><a href="#"><img src="{&STATIC}/admin/images/logo.gif" alt="" title="" border="0" /></a></div>
     
-    <div class="right_header">Welcome Admin, <a href="#">Visit site</a> | <a href="#" class="messages">(3) Messages</a> | <a href="#" class="logout">Logout</a></div>
+    <div class="right_header">
+    	欢迎您, {$loginUser.nickname}, 
+    	<a href="{&WWW}">访问前台</a> 
+    	| <a href="#" class="messages">(0) Messages</a> 
+    	| <a href="{&ADMIN}/User/logout" class="logout">Logout</a>
+    </div>
     <div id="clock_a"></div>
 </div>

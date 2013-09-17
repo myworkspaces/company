@@ -1,0 +1,49 @@
+           
+    <h2>用户管理</h2> 
+	<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+	    <thead>
+	    	<tr>
+	    		<!--  
+	        	<th scope="col" class="rounded-company"></th>
+	        	-->
+	            <th scope="col" class="rounded">用户名</th>
+	            <!--  
+	            <th scope="col" class="rounded">昵称</th>
+	            -->
+	            <th scope="col" class="rounded">邮箱</th>
+	            <th scope="col" class="rounded">电话</th>
+	            <th scope="col" class="rounded">地址</th>
+	            <th scope="col" class="rounded">编辑</th>
+	            <th scope="col" class="rounded-q4">删除</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	<present name="users">
+		    	<volist name="users" id="u">
+			    	<tr>
+			    		<!--  
+			        	<td><input type="checkbox" name="ids[]" value="{$u.id}" /></td>
+			        	-->
+			            <td>{$u.name}</td>
+			            <!--  
+			            <td>{$u.nickname}</td>
+			            -->
+			            <td>{$u.email}</td>
+			            <td>{$u.tel}</td>
+						<td>{$u.address}</td>
+			            <td><a href="{&ADMIN}/User/edit?name={$u.name}"><img src="{&STATIC}/admin/images/user_edit.png" alt="" title="" border="0" /></a></td>
+			            <td><a href="{&ADMIN}/User/deleteUser?name={$u.name}" class="ask"><img src="{&STATIC}/admin/images/trash.png" alt="" title="" border="0" /></a></td>
+			        </tr>
+		        </volist>
+	        </present>
+	    </tbody>
+	</table>
+	<!--  
+	<a href="javascript:void(0);" class="bt_red deleteBatch"><span class="bt_red_lft"></span><strong>批量删除</strong><span class="bt_red_r"></span></a> 
+	-->     
+	<present name="page">     
+	<div class="pagination">
+		{$page}
+	</div> 
+	</present>
+	
