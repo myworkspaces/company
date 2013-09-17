@@ -114,10 +114,10 @@ drop table if exists tbl_product_regcode_relation;
 create table tbl_product_regcode_relation
 (
 	id integer not null auto_increment,
-	product_id integer not null,
-	regcode integer not null,
+	product varchar(50) not null,
+	regcode varchar(50) not null,
 	create_time datetime not null,
-	creater_id integer not null,
+	creater varchar(50) not null,
 	primary key (id)
 )engine=innodb;
 

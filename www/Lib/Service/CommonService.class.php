@@ -25,7 +25,7 @@
 			!isset($options['condition']) && $options['condition']=$this->default['condition'];
 			!isset($options['page']) && $options['page']=$this->default['page'];
 			!isset($options['pageSize']) && $options['pageSize']=$this->default['pageSize'];
-			$count=$this->count($options['condition']);
+			$count=$this->count($options);
 			$page=new Page($count,$options['pageSize']);
 			$theme='%first% %upPage% %linkPage% %downPage% %end%';
 			$page->setConfig("theme", $theme);
